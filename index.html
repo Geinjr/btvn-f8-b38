@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Link FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-wrap">
+    <h1><span>Smatyx</span> Todos App</h1>
+    <div class="topEl">
+      <div class="searchEl">
+        <input type="text" class="inputSearch" placeholder="Search Todos">
+        <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+      </div>
+      <button class="btn-add">Add Todos</button>
+    </div>
+    <div class="bottomEl">
+      <div class="pendingWrap">
+       
+      </div>
+      <button class="btn-showComplete">
+        Completed Todos <span class="complete-number">0</span> <i class="fa-regular fa-circle-right"></i>
+      </button>
+      <div class="completedWrap"></div>
+    </div>
+  </div>
+
+  <div class="modal-box">
+    <form class="form-add">
+      <div class="modal">
+        <input type="text" placeholder="Add Todos" class="input-add" name="taskName"> 
+        <hr>
+        <div class="btn-wrap">
+          <button type="submit" class="btn-save">Save</button>
+          <button class="btn-cancel">Cancel</button>
+        </div>
+      </div>
+    </form>
+    <div class="overlay"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

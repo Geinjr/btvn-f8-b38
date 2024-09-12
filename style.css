@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .todo-wrap {
+    margin: 20px auto;
+    max-width: 80%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h1 span {
+    background: linear-gradient(to right, #5ca0f8 0%, #1a7900 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 12px 0;
+  }
+  
+  .topEl {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .topEl .searchEl {
+    position: relative;
+    width: 100%;
+  }
+  
+  .searchEl .inputSearch {
+    position: relative;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #ccc;
+  }
+  
+  .searchEl .inputSearch::placeholder {
+    text-transform: capitalize;
+    color: #aaabb0;
+  }
+  
+  .searchEl .inputSearch:focus {
+    border: 1px solid ;
+  }
+  
+  .searchEl .searchIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    color: white;
+    background-color: #1b4fd2;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .topEl .btn-add {
+    padding: 10px 16px;
+    text-wrap: nowrap;
+    background-color: #057857;
+    color: white;
+    border-radius: 8px;
+    margin-left: 8px;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bottomEl {
+    padding: 12px 0px;
+  }
+  
+  .bottomEl .pendingTodo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    margin: 10px 0px;
+  }
+  
+
+  
+  .pendingTodo .pendingIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .pendingIcon .btn-delete {
+    background-color: #c0113c;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .pendingIcon .btn-change {
+    background-color: #1c4fd5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .pendingIcon .btn-done {
+    background-color: #9ca2af;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .pendingIcon .btn-done:hover {
+    background-color: #057857;
+  }
+  
+  .btn-showComplete {
+    margin: 12px 0px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #9ca2af;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .btn-showComplete.active {
+    background-color: #057857;
+  }
+  
+  .modal-box {
+    display: none;
+  }
+  
+  .modal-box .overlay {
+    position: fixed;
+    inset: 0;
+    background: #0000007b;
+    z-index: 9998;
+  }
+  
+  .modal-box .modal {
+    position: fixed;
+    inset: 0;
+    margin: 0 auto;
+    width: 350px;
+    height: 180px;
+    top: 50%;
+    background: #fff;
+    transform: translateY(-50%);
+    z-index: 9999;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .modal-box .modal input {
+    width: 100%;
+    padding: 16px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #ccc;
+  }
+  
+  .modal-box .modal input:focus {
+    border: 1px solid black;
+  }
+  
+  .modal-box .modal .btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 50px;
+  }
+  
+  .modal .btn-wrap .btn-save {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #057857;
+    color: white;
+    outline: none;
+    border: none;
+    width: 80px;
+    cursor: pointer;
+  }
+  
+  .modal .btn-wrap .btn-cancel {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    outline: none;
+    border: 1px solid #ccc;
+    width: 80px;
+    cursor: pointer;
+  }
+  
+  .completedWrap .btn-done {
+    background-color: #057857;
+  }
+
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+  
